@@ -50,10 +50,19 @@
                 android:textStyle="bold"
                 android:layout_margin="16dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/indication"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_margin="16dp" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Escribe algo"
+                android:hint="@string/write_message"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp">
 
@@ -62,6 +71,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
+                    android:layout_marginHorizontal="12dp"
                     android:inputType="text"
                     android:textColorHint="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>

@@ -2,4 +2,6 @@
     <string name="app_name">endevinaNumero</string>
     <string name="tittle_main">Benvingut</string>
     <string name="send">Enviar</string>
+    <string name="indication">Introdueix el teu usuari:</string>
+    <string name="write_message">Escriu la teva resposta</string>
 </resources>

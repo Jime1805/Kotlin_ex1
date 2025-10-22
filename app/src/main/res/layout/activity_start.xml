@@ -5,6 +5,24 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="32dp"
+    android:padding="16dp"
+    android:background="@color/background_activity"
     tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/tvTittle_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Benvingut: Invitat"
+        android:textAllCaps="true"
+        android:layout_marginTop="32dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
