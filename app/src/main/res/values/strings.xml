@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">endevinaNumero</string>
+    <string name="tittle_main">Benvingut</string>
+    <string name="send">Enviar</string>
+</resources>
