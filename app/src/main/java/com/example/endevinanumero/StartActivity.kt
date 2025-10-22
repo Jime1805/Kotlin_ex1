@@ -15,12 +15,16 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
+        tvTittle_start = findViewById(R.id.tvTittle_start)
         val user: String = intent.extras?.getString(StartActivity_KEY) ?: "invitado"
         initUi(user)
     }
 
     private fun initUi(user: String){
-        tvTittle_start.text = "Benvingut: $user"
+        when(user){
+            "" -> tvTittle_start.text = "Benvingut: Invitat"
+            else -> tvTittle_start.text = "Benvingut: $user"
+        }
     }
 
 }
