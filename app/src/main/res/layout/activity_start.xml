@@ -82,11 +82,11 @@
                     android:id="@+id/fab1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:text="1"
+                    android:text="@string/num1"
                     android:textSize="60sp"
                     app:tint="@color/white"
                     app:maxImageSize="60dp"
-                    android:backgroundTint="@color/buton_startActivity">
+                    tools:backgroundTint="@color/buton_activated">
                 </Button>
 
             </LinearLayout>
@@ -104,28 +104,25 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginEnd="50dp"
-                    android:text="2"
+                    android:text="@string/num2"
                     android:textSize="60sp"
                     app:tint="@color/white"
                     app:maxImageSize="60dp"
-                    android:backgroundTint="@color/buton_startActivity">
+                    tools:backgroundTint="@color/buton_startActivity">
                 </Button>
 
                 <Button
                     android:id="@+id/fab3"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:text="3"
+                    android:text="@string/num3"
                     android:textSize="60sp"
                     app:tint="@color/white"
-                    android:backgroundTint="@color/buton_startActivity">
+                    tools:backgroundTint="@color/buton_startActivity">
                 </Button>
             </LinearLayout>
 
         </LinearLayout>
-
-
-
 
     </androidx.cardview.widget.CardView>
 
@@ -152,12 +149,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="40dp"
-                android:text="@string/go_back"/>
+                android:text="@string/go_back"
+                android:backgroundTint="@color/buton_startActivity"/>
             <Button
                 android:id="@+id/btnSend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/send"/>
+                android:text="@string/send"
+                android:backgroundTint="@color/buton_startActivity"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

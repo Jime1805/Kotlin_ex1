@@ -6,10 +6,13 @@
 
     <color name="background_activity">#0927CA</color>
     <color name="background_text">#04115F</color>
-    <color name="buton_startActivity">#65489D</color>
-    <color name="buton_activated">#BA2D5D</color>
+    <color name="buton_startActivity">#492B94</color>
+    <color name="buton_activated">#3072A8</color>
 
     <color name="background_activity_succes">#095D56</color>
     <color name="background_text_succes">#032C29</color>
+
+    <color name="background_activity_error">#ED3C2F</color>
+    <color name="background_text_error">#EB1605</color>
 
 </resources>

@@ -1,7 +1,9 @@
 package com.example.endevinanumero
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,15 +14,25 @@ import com.example.endevinanumero.MainActivity.Companion.StartActivity_KEY
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class StartActivity : AppCompatActivity() {
+    private val numRandom = numRandom()
+    private val numUser = numUser()
     private var isBtn1selected: Boolean = true
     private var isBtn2selected: Boolean = false
     private var isBtn3selected: Boolean = false
     lateinit var tvTittle_start: TextView
 
 
-    lateinit var fab1: FloatingActionButton
-    lateinit var fab2: FloatingActionButton
-    lateinit var fab3: FloatingActionButton
+    lateinit var fab1: Button
+    lateinit var fab2: Button
+    lateinit var fab3: Button
+    lateinit var btngoBack: Button
+    lateinit var btnSend: Button
+
+    companion object{
+        const val num_user = "Succes_or_Error"
+        const val num_random = "Succes_or_Error"
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +41,16 @@ class StartActivity : AppCompatActivity() {
         initComponents()
         initUi(user)
         initListeners()
+    }
+
+    private fun numRandom(): Int{
+        return (1..3).random()
+    }
+
+    private fun numUser(): Int{
+        if(isBtn1selected) return 1
+        else if(isBtn2selected) return 2
+        else return 3
     }
 
     private fun changeBtn(num : Int){
@@ -63,6 +85,29 @@ class StartActivity : AppCompatActivity() {
             changeBtn(3)
             setBtnColor()
         }
+        btngoBack.setOnClickListener { onBackPressed() }
+        btnSend.setOnClickListener {
+            navigateToNextScreen()
+        }
+    }
+    private fun navigateToNextScreen() {
+        if (numUser == numRandom) {
+            navigateToSucces()
+        } else {
+            navigateToError()
+        }
+    }
+    private fun navigateToSucces(){
+        val intent = Intent(this, SuccessActivity::class.java)
+        intent.putExtra(num_user, numUser)
+        intent.putExtra(num_random, numRandom)
+        startActivity(intent)
+    }
+    private fun navigateToError(){
+        val intent = Intent(this, ErrorActivity::class.java)
+        intent.putExtra(num_user, numUser)
+        intent.putExtra(num_random, numRandom)
+        startActivity(intent)
     }
 
     private fun initComponents(){
@@ -70,10 +115,8 @@ class StartActivity : AppCompatActivity() {
         fab1 = findViewById(R.id.fab1)
         fab2 = findViewById(R.id.fab2)
         fab3 = findViewById(R.id.fab3)
-
-        fab1.imageTintList = null
-        fab2.imageTintList = null
-        fab3.imageTintList = null
+        btngoBack = findViewById(R.id.btngoBack)
+        btnSend = findViewById(R.id.btnSend)
     }
 
     private fun initUi(user: String){
