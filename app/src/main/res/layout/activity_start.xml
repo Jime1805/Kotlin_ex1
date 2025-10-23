@@ -64,45 +64,67 @@
         android:backgroundTint="@color/background_text"
         app:layout_constraintTop_toBottomOf="@+id/cvDescription"
         app:layout_constraintBottom_toTopOf="@+id/cvButtons">
-
+        
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:layout_marginTop="50dp"
-            android:layout_marginHorizontal="26dp">
+            android:orientation="vertical">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:backgroundTint="@color/buton_startActivity">
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginHorizontal="26dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_uno"
+                    android:contentDescription="@string/num1"
+                    app:tint="@color/white"
+                    app:maxImageSize="60dp"
+                    android:backgroundTint="@color/buton_startActivity">
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="40sp"
+                android:layout_marginHorizontal="26dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="50dp"
+                    android:src="@drawable/ic_dos"
+                    app:tint="@color/white"
+                    app:maxImageSize="60dp"
+                    android:backgroundTint="@color/buton_startActivity"
+                    android:contentDescription="@string/num2">
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_tres"
+                    app:tint="@color/white"
+                    app:maxImageSize="60dp"
+                    android:backgroundTint="@color/buton_startActivity"
+                    android:contentDescription="@string/num3">
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            </LinearLayout>
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="200dp"
-            android:layout_marginHorizontal="26dp">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginEnd="50dp"
-                android:backgroundTint="@color/buton_startActivity">
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:backgroundTint="@color/buton_startActivity">
-            </com.google.android.material.floatingactionbutton.FloatingActionButton>
-        </LinearLayout>
 
 
 
