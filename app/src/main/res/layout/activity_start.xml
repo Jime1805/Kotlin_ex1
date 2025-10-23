@@ -78,16 +78,16 @@
                 android:gravity="center"
                 android:layout_marginHorizontal="26dp">
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <Button
                     android:id="@+id/fab1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/ic_uno"
-                    android:contentDescription="@string/num1"
+                    android:text="1"
+                    android:textSize="60sp"
                     app:tint="@color/white"
                     app:maxImageSize="60dp"
                     android:backgroundTint="@color/buton_startActivity">
-                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                </Button>
 
             </LinearLayout>
 
@@ -99,28 +99,27 @@
                 android:layout_marginTop="40sp"
                 android:layout_marginHorizontal="26dp">
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <Button
                     android:id="@+id/fab2"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginEnd="50dp"
-                    android:src="@drawable/ic_dos"
+                    android:text="2"
+                    android:textSize="60sp"
                     app:tint="@color/white"
                     app:maxImageSize="60dp"
-                    android:backgroundTint="@color/buton_startActivity"
-                    android:contentDescription="@string/num2">
-                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                    android:backgroundTint="@color/buton_startActivity">
+                </Button>
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <Button
                     android:id="@+id/fab3"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/ic_tres"
+                    android:text="3"
+                    android:textSize="60sp"
                     app:tint="@color/white"
-                    app:maxImageSize="60dp"
-                    android:backgroundTint="@color/buton_startActivity"
-                    android:contentDescription="@string/num3">
-                </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                    android:backgroundTint="@color/buton_startActivity">
+                </Button>
             </LinearLayout>
 
         </LinearLayout>
