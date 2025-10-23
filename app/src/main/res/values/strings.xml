@@ -4,4 +4,6 @@
     <string name="send">Enviar</string>
     <string name="indication">Introdueix el teu usuari:</string>
     <string name="write_message">Escriu la teva resposta</string>
+    <string name="description">Et proposo un repte: Endevina el número que estic pensant</string>
+    <string name="go_back">Enrere</string>
 </resources>

@@ -6,6 +6,7 @@
 
     <color name="background_activity">#0927CA</color>
     <color name="background_text">#04115F</color>
+    <color name="buton_startActivity">#65489D</color>
 
     <color name="background_activity_succes">#095D56</color>
     <color name="background_text_succes">#032C29</color>
