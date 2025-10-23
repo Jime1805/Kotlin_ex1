@@ -10,4 +10,6 @@
     <string name="num2">2</string>
     <string name="num3">3</string>
     <string name="error">Error</string>
+    <string name="descripton_error">No has encertat el número 💀</string>
+    <string name="resultats">Resultats:</string>
 </resources>

@@ -15,7 +15,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class StartActivity : AppCompatActivity() {
     private val numRandom = numRandom()
-    private val numUser = numUser()
     private var isBtn1selected: Boolean = true
     private var isBtn2selected: Boolean = false
     private var isBtn3selected: Boolean = false
@@ -29,8 +28,8 @@ class StartActivity : AppCompatActivity() {
     lateinit var btnSend: Button
 
     companion object{
-        const val num_user = "Succes_or_Error"
-        const val num_random = "Succes_or_Error"
+        const val num_user = "user"
+        const val num_random = "random"
     }
 
 
@@ -91,19 +90,22 @@ class StartActivity : AppCompatActivity() {
         }
     }
     private fun navigateToNextScreen() {
-        if (numUser == numRandom) {
-            navigateToSucces()
+        val userNumber = numUser()
+        if (userNumber == numRandom) {
+            navigateToSucces(userNumber)
         } else {
-            navigateToError()
+            navigateToError(userNumber)
         }
     }
-    private fun navigateToSucces(){
+
+    private fun navigateToSucces(numUser: Int){
         val intent = Intent(this, SuccessActivity::class.java)
         intent.putExtra(num_user, numUser)
         intent.putExtra(num_random, numRandom)
         startActivity(intent)
     }
-    private fun navigateToError(){
+
+    private fun navigateToError(numUser: Int){
         val intent = Intent(this, ErrorActivity::class.java)
         intent.putExtra(num_user, numUser)
         intent.putExtra(num_random, numRandom)
@@ -126,6 +128,7 @@ class StartActivity : AppCompatActivity() {
         }
         changeBtn(1)
         setBtnColor()
+        val numero = numRandom()
     }
 
 }
