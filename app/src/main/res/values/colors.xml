@@ -9,8 +9,8 @@
     <color name="buton_startActivity">#492B94</color>
     <color name="buton_activated">#3072A8</color>
 
-    <color name="background_activity_succes">#095D56</color>
-    <color name="background_text_succes">#032C29</color>
+    <color name="background_activity_succes">#03E20C</color>
+    <color name="background_text_succes">#067C64</color>
 
     <color name="background_activity_error">#EB1605</color>
     <color name="background_text_error">#F8665B</color>

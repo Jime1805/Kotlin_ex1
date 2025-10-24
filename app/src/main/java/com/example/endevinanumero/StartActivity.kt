@@ -14,7 +14,7 @@ import com.example.endevinanumero.MainActivity.Companion.StartActivity_KEY
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class StartActivity : AppCompatActivity() {
-    private val numRandom = numRandom()
+    private var numRandom = numRandom()
     private var isBtn1selected: Boolean = true
     private var isBtn2selected: Boolean = false
     private var isBtn3selected: Boolean = false
@@ -26,6 +26,7 @@ class StartActivity : AppCompatActivity() {
     lateinit var fab3: Button
     lateinit var btngoBack: Button
     lateinit var btnSend: Button
+    lateinit var user: String
 
     companion object{
         const val num_user = "user"
@@ -36,9 +37,8 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
-        val user: String = intent.extras?.getString(StartActivity_KEY) ?: "invitado"
         initComponents()
-        initUi(user)
+        initUi()
         initListeners()
     }
 
@@ -113,6 +113,7 @@ class StartActivity : AppCompatActivity() {
     }
 
     private fun initComponents(){
+        user= intent.extras?.getString(StartActivity_KEY) ?: "invitado"
         tvTittle_start = findViewById(R.id.tvTittle_start)
         fab1 = findViewById(R.id.fab1)
         fab2 = findViewById(R.id.fab2)
@@ -121,14 +122,13 @@ class StartActivity : AppCompatActivity() {
         btnSend = findViewById(R.id.btnSend)
     }
 
-    private fun initUi(user: String){
+    private fun initUi(){
         when(user){
             "" -> tvTittle_start.text = "Benvingut: Invitat"
             else -> tvTittle_start.text = "Benvingut: $user"
         }
         changeBtn(1)
         setBtnColor()
-        val numero = numRandom()
     }
 
 }
