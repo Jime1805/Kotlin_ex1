@@ -29,6 +29,7 @@ class StartActivity : AppCompatActivity() {
     lateinit var user: String
 
     companion object{
+        const val usuari = "usuari"
         const val num_user = "user"
         const val num_random = "random"
     }
@@ -102,6 +103,7 @@ class StartActivity : AppCompatActivity() {
         val intent = Intent(this, SuccessActivity::class.java)
         intent.putExtra(num_user, numUser)
         intent.putExtra(num_random, numRandom)
+        intent.putExtra(usuari, user)
         startActivity(intent)
     }
 
@@ -109,6 +111,7 @@ class StartActivity : AppCompatActivity() {
         val intent = Intent(this, ErrorActivity::class.java)
         intent.putExtra(num_user, numUser)
         intent.putExtra(num_random, numRandom)
+        intent.putExtra(usuari, user)
         startActivity(intent)
     }
 
