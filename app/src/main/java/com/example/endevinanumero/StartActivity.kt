@@ -14,7 +14,7 @@ import com.example.endevinanumero.MainActivity.Companion.StartActivity_KEY
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class StartActivity : AppCompatActivity() {
-    private var numRandom = numRandom()
+    private var numRandom : Int = 0
     private var isBtn1selected: Boolean = true
     private var isBtn2selected: Boolean = false
     private var isBtn3selected: Boolean = false
@@ -38,6 +38,13 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
+        initComponents()
+        initUi()
+        initListeners()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
         initComponents()
         initUi()
         initListeners()
@@ -116,6 +123,7 @@ class StartActivity : AppCompatActivity() {
     }
 
     private fun initComponents(){
+        numRandom = numRandom()
         user= intent.extras?.getString(StartActivity_KEY) ?: "invitado"
         tvTittle_start = findViewById(R.id.tvTittle_start)
         fab1 = findViewById(R.id.fab1)
